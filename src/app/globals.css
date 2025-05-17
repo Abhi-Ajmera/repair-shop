@@ -43,6 +43,11 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+@theme default {
+  --background-image: url('/images/background.jpg');
+  --background-size: cover;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -118,5 +123,9 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .starry {
+    background-image: var(--background-image);
+    background-size: var(--background-size);
   }
 }
